@@ -1,4 +1,3 @@
-//---------- Constantes e variáveis
 const btnAvancar = document.getElementById("btn-avancar");
 const btnVoltar = document.getElementById("btn-voltar");
 const cartoes = document.querySelectorAll(".cartao");
@@ -13,7 +12,6 @@ function mostrarCartao(indiceCartao){
     cartoes [indiceCartao].classList.add("selecionado");
 };
 
-//---------- btnAvancar
 btnAvancar.addEventListener("click", function (){
     if (cartaoAtual === cartoes.length - 1) return;
     
@@ -23,13 +21,12 @@ btnAvancar.addEventListener("click", function (){
     mostrarCartao(cartaoAtual);    
 }); 
 
-//---------- btnVoltar
-// Trabalhar, inversamente, os conceitos anteriores.
 btnVoltar.addEventListener("click", function () {
 
     if (cartaoAtual === 0) return;
     
     esconderCartaoSelecionado();
+    
     cartaoAtual--;
     mostrarCartao(cartaoAtual);
 }); 
